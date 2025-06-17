@@ -22,6 +22,7 @@ var (
 		"API":     regexp.MustCompile(`(?i)api[_-]?key['":\s=]+[a-zA-Z0-9\-_]{20,}`),
 		"DB":      regexp.MustCompile(`(?i)(mongodb|postgresql|mysql)://[^\s'"]+`),
 		"Private": regexp.MustCompile(`-----BEGIN.*PRIVATE KEY-----`),
+		"NewPrivate": regexp.MustCompile(-----BEGIN.*PRIVATE KEY-----),
 		"Bearer":  regexp.MustCompile(`Bearer\s+[a-zA-Z0-9\-._~+/]+=*`),
 		"CC":      regexp.MustCompile(`\b(?:4\d{15}|5[1-5]\d{14}|3[47]\d{13}|6(?:011|5\d{2})\d{12})\b`),
 	}
